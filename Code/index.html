@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR" translate="no">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="google" content="notranslate">
+
+    <title>Decifrador</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+    <main class="container">
+
+        <!-- CABEÇALHO -->
+
+        <header class="cabecalho">
+
+            <div class="identificacao">
+
+                <span class="marcador"></span>
+
+                <span>UFERSA // SISTEMA DE DECIFRAÇÃO</span>
+
+            </div>
+
+            <h1>DECIFRADOR</h1>
+
+            <p>
+                Organize as letras encontradas na ordem correta.
+            </p>
+
+        </header>
+
+
+        <!-- ÁREA DA SEQUÊNCIA -->
+
+        <section class="area-desafio">
+
+            <div class="titulo-secao">
+                SEQUÊNCIA
+            </div>
+
+            <div id="slots" class="slots">
+
+                <!--
+                    Os 8 espaços serão criados
+                    automaticamente pelo JavaScript.
+                -->
+
+            </div>
+
+        </section>
+
+
+        <!-- ÁREA DAS LETRAS -->
+
+        <section class="area-letras">
+
+            <div class="titulo-secao">
+                LETRAS ENCONTRADAS
+            </div>
+
+            <p class="instrucao">
+                Arraste as letras para os espaços acima.
+            </p>
+
+            <div id="letras" class="letras">
+
+                <!--
+                    As letras serão criadas
+                    automaticamente pelo JavaScript.
+                -->
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTROLES -->
+
+        <section class="area-controle">
+
+            <div class="tentativas">
+
+                TENTATIVAS
+
+                <span id="contador">
+                    0
+                </span>
+
+            </div>
+
+
+            <button id="verificar">
+
+                VERIFICAR
+
+            </button>
+
+        </section>
+
+
+        <!-- PEQUENO INDICADOR -->
+
+        <div class="status">
+
+            <span class="status-ponto"></span>
+
+            SISTEMA OPERACIONAL
+
+        </div>
+
+    </main>
+
+
+    <!-- ============================
+         TELA DE SUCESSO
+    ============================= -->
+
+    <div id="tela-sucesso" class="overlay">
+
+        <div class="mensagem-sucesso">
+
+            <div class="icone-sucesso">
+                ✓
+            </div>
+
+            <div class="codigo-validado">
+                CÓDIGO VALIDADO
+            </div>
+
+            <h2>
+                SEQUÊNCIA CORRETA
+            </h2>
+
+            <div class="palavra-final">
+                INOVAÇÃO
+            </div>
+
+            <p>
+                O sistema reconheceu a sequência.
+            </p>
+
+            <div class="proxima-etapa">
+
+                ACESSO LIBERADO
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ============================
+         MENSAGEM DE ERRO
+    ============================= -->
+
+    <div id="mensagem-erro" class="mensagem-erro">
+
+        <span>×</span>
+
+        SEQUÊNCIA INCORRETA
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
