@@ -624,7 +624,7 @@ body::before {
     inset: 0;
 
     background:
-        rgba(3, 10, 16, 0.98);
+        rgba(2, 12, 7, 0.975);
 
     display: flex;
 
@@ -636,8 +636,7 @@ body::before {
 
     visibility: hidden;
 
-    transition:
-        opacity 0.5s;
+    transition: opacity 0.5s;
 
     z-index: 20;
 }
@@ -648,9 +647,8 @@ body::before {
     opacity: 1;
 
     visibility: visible;
+
 }
-
-
 /* =====================================================
    MENSAGEM DE SUCESSO
 ===================================================== */
@@ -680,13 +678,13 @@ body::before {
 
 .icone-sucesso {
 
-    width: 82px;
+    width: 86px;
 
-    height: 82px;
+    height: 86px;
 
     margin: 0 auto 28px;
 
-    border: 2px solid #2386c8;
+    border: 2px solid #35b86b;
 
     border-radius: 50%;
 
@@ -696,12 +694,14 @@ body::before {
 
     align-items: center;
 
-    font-size: 42px;
+    font-size: 45px;
 
-    color: #55a8db;
+    color: #55d987;
+
+    background: rgba(30, 120, 70, 0.08);
 
     box-shadow:
-        0 0 30px rgba(35, 134, 200, 0.18);
+        0 0 25px rgba(53, 184, 107, 0.25);
 
     animation:
         aparecer 0.5s ease;
@@ -745,7 +745,8 @@ body::before {
     color: #ffffff;
 
     text-shadow:
-        0 0 25px rgba(35, 134, 200, 0.25);
+        0 0 18px rgba(57, 200, 115, 0.35),
+        0 0 35px rgba(57, 200, 115, 0.12);
 }
 
 
@@ -755,7 +756,7 @@ body::before {
 
     font-size: 16px;
 
-    color: #71879a;
+    color: #7ea58c;
 }
 
 
@@ -765,13 +766,13 @@ body::before {
 
     padding-top: 20px;
 
-    border-top: 1px solid #1e374c;
+    border-top: 1px solid #28543a;
 
     font-size: 12px;
 
     letter-spacing: 4px;
 
-    color: #4c8bb4;
+    color: #55d987;
 }
 
 
