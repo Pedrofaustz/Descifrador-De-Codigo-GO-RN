@@ -891,3 +891,260 @@ body::before {
     }
 
 }
+/* =====================================================
+   AJUSTE VISUAL — INTERFACE MAIS CLARA
+   Mantém o azul como identidade principal
+===================================================== */
+
+body {
+    background:
+        radial-gradient(circle at 50% 0%, #eaf5fc 0%, #d9edf8 42%, #c8e3f1 100%);
+    color: #183246;
+}
+
+body::before {
+    background: linear-gradient(rgba(23,105,170,0.035) 1px, transparent 1px);
+    opacity: 0.45;
+}
+
+.container {
+    background: rgba(255,255,255,0.98);
+    border-color: #b7d2e3;
+    box-shadow: 0 20px 55px rgba(35,86,120,0.18), 0 0 35px rgba(23,105,170,0.08);
+}
+
+.container::before { background: #1769aa; }
+.identificacao { color: #54758d; }
+.marcador { background: #1769aa; box-shadow: 0 0 9px rgba(23,105,170,0.45); }
+.cabecalho h1 { color: #17364d; }
+.cabecalho p { color: #5f788a; }
+.titulo-secao { color: #356984; }
+.instrucao { color: #607b8d; }
+
+.slot {
+    background: #f7fbfd;
+    border-color: #a9c7d9;
+}
+
+.slot:not(.preenchido)::after { background: #8eafc3; }
+
+.slot.drag-over {
+    border-color: #1769aa;
+    background: #e7f3fa;
+    box-shadow: 0 0 16px rgba(23,105,170,0.18);
+}
+
+.slot.preenchido { border-color: #5d94b4; }
+
+.letras {
+    border-top-color: #c7dce8;
+    border-bottom-color: #c7dce8;
+}
+
+.letra {
+    background: #eaf4fa;
+    border-color: #91b7ce;
+    color: #173b53;
+    box-shadow: 0 3px 8px rgba(35,86,120,0.08);
+}
+
+.letra:hover {
+    background: #d9edf8;
+    border-color: #1769aa;
+    box-shadow: 0 7px 15px rgba(35,86,120,0.14);
+}
+
+.slot .letra {
+    background: #dceef8;
+    color: #123b56;
+}
+
+.area-controle { border-top-color: #c7dce8; }
+
+/* =====================================================
+   POPUP DE SUCESSO — VERDE CLARO
+===================================================== */
+
+.overlay {
+    background: rgba(221,246,231,0.78);
+    backdrop-filter: blur(5px);
+}
+
+.mensagem-sucesso {
+    min-width: 520px;
+    max-width: 90vw;
+    padding: 48px 60px;
+    background: #f2fff7;
+    border: 2px solid #73d49a;
+    border-radius: 14px;
+    box-shadow: 0 20px 60px rgba(39,125,75,0.22), 0 0 35px rgba(70,190,112,0.16);
+}
+
+.icone-sucesso {
+    width: 86px;
+    height: 86px;
+    border: 3px solid #31ad62;
+    color: #22984f;
+    background: #dff8e9;
+    box-shadow: 0 0 0 7px rgba(49,173,98,0.08), 0 0 28px rgba(49,173,98,0.22);
+}
+
+.codigo-validado { color: #278e50; }
+.mensagem-sucesso h2 { color: #1f5133; }
+.palavra-final { color: #176f3b; text-shadow: 0 0 18px rgba(49,173,98,0.20); }
+.mensagem-sucesso p { color: #4f7760; }
+.proxima-etapa { border-top-color: #b8e6c8; color: #278e50; }
+
+
+/* =====================================================
+   VERSÃO CLARA — CONTRASTE ALTO
+   Azul UFERSA + fundo claro
+===================================================== */
+
+html, body {
+    background: #eef7fc !important;
+    color: #18384d !important;
+}
+
+body {
+    background:
+        radial-gradient(circle at 50% 0%, #ffffff 0%, #eef7fc 55%, #dceef8 100%) !important;
+}
+
+body::before {
+    background:
+        linear-gradient(rgba(23,105,170,0.035) 1px, transparent 1px) !important;
+    opacity: 0.5 !important;
+}
+
+.container {
+    background: #ffffff !important;
+    border: 1px solid #b9d5e5 !important;
+    box-shadow:
+        0 14px 40px rgba(33, 83, 116, 0.14),
+        0 2px 8px rgba(33, 83, 116, 0.08) !important;
+}
+
+.container::before {
+    background: #1769aa !important;
+}
+
+.identificacao {
+    color: #4f7187 !important;
+}
+
+.cabecalho h1 {
+    color: #123d5a !important;
+}
+
+.cabecalho p {
+    color: #5d7789 !important;
+}
+
+.titulo-secao {
+    color: #1769aa !important;
+}
+
+.instrucao {
+    color: #587387 !important;
+}
+
+.slot {
+    background: #f8fcff !important;
+    border: 2px solid #9fc1d5 !important;
+}
+
+.slot:not(.preenchido)::after {
+    background: #79a5bd !important;
+}
+
+.slot.drag-over {
+    background: #e7f4fb !important;
+    border-color: #1769aa !important;
+    box-shadow: 0 0 16px rgba(23,105,170,0.20) !important;
+}
+
+.slot.preenchido {
+    background: #f0f8fc !important;
+    border-color: #5f98b8 !important;
+}
+
+.letras {
+    border-top: 1px solid #c5dce9 !important;
+    border-bottom: 1px solid #c5dce9 !important;
+}
+
+.letra {
+    background: #e8f4fa !important;
+    border: 2px solid #8fb8ce !important;
+    color: #123e59 !important;
+    box-shadow: 0 3px 8px rgba(23,69,98,0.10) !important;
+}
+
+.letra:hover {
+    background: #d7ecf7 !important;
+    border-color: #1769aa !important;
+    box-shadow: 0 7px 16px rgba(23,105,170,0.18) !important;
+}
+
+.slot .letra {
+    background: #dceef8 !important;
+    color: #0f3b57 !important;
+}
+
+.area-controle {
+    border-top: 1px solid #c5dce9 !important;
+}
+
+.erro {
+    background: #fff5f5 !important;
+    border-color: #e1aaaa !important;
+    color: #a13d3d !important;
+}
+
+
+/* =====================================================
+   SUCESSO — POPUP VERDE BEM CLARO
+===================================================== */
+
+.overlay {
+    background: rgba(220, 242, 228, 0.88) !important;
+    backdrop-filter: blur(6px);
+}
+
+.mensagem-sucesso {
+    background: #f4fff7 !important;
+    border: 2px solid #67c98b !important;
+    border-radius: 16px !important;
+    box-shadow:
+        0 18px 55px rgba(44, 126, 75, 0.20),
+        0 0 0 1px rgba(103,201,139,0.12) !important;
+}
+
+.icone-sucesso {
+    background: #dff8e8 !important;
+    border-color: #36b66a !important;
+    color: #238c4e !important;
+}
+
+.codigo-validado {
+    color: #299354 !important;
+}
+
+.mensagem-sucesso h2 {
+    color: #1d5533 !important;
+}
+
+.palavra-final {
+    color: #18753d !important;
+    text-shadow: 0 2px 12px rgba(36,150,78,0.15) !important;
+}
+
+.mensagem-sucesso p {
+    color: #50765e !important;
+}
+
+.proxima-etapa {
+    border-top-color: #b8e5c8 !important;
+    color: #299354 !important;
+}
