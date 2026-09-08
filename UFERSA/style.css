@@ -1,0 +1,1150 @@
+/* =====================================================
+   CONFIGURAÇÕES GERAIS
+===================================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            #123556 0%,
+            #071522 40%,
+            #050b11 80%
+        );
+
+    color: #e8edf2;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    user-select: none;
+
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   EFEITO DE FUNDO
+===================================================== */
+
+body::before {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            rgba(255,255,255,0.012) 1px,
+            transparent 1px
+        );
+
+    background-size: 100% 4px;
+
+    opacity: 0.25;
+}
+
+
+/* =====================================================
+   CONTAINER PRINCIPAL
+===================================================== */
+
+.container {
+
+    width: 1100px;
+
+    max-width: 94%;
+
+    padding: 52px 58px 34px;
+
+    background: rgba(7, 15, 23, 0.97);
+
+    border: 1px solid #294a65;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.6),
+        0 0 45px rgba(0, 93, 170, 0.08);
+
+    position: relative;
+}
+
+
+/* Linha azul superior */
+
+.container::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    height: 4px;
+
+    background: #1769aa;
+}
+
+
+/* =====================================================
+   CABEÇALHO
+===================================================== */
+
+.cabecalho {
+
+    text-align: center;
+
+    margin-bottom: 50px;
+}
+
+
+.identificacao {
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 9px;
+
+    font-size: 12px;
+
+    letter-spacing: 2.5px;
+
+    color: #6c8ba5;
+
+    margin-bottom: 20px;
+}
+
+
+.marcador {
+
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: #2386c8;
+
+    box-shadow:
+        0 0 9px rgba(35, 134, 200, 0.7);
+}
+
+
+.cabecalho h1 {
+
+    font-size: 38px;
+
+    font-weight: 500;
+
+    letter-spacing: 8px;
+
+    color: #f0f4f7;
+}
+
+
+.cabecalho p {
+
+    margin-top: 15px;
+
+    font-size: 17px;
+
+    color: #7d92a4;
+}
+
+
+/* =====================================================
+   TÍTULOS DAS SEÇÕES
+===================================================== */
+
+.titulo-secao {
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+    color: #7595ae;
+
+    margin-bottom: 15px;
+}
+
+
+.instrucao {
+
+    font-size: 15px;
+
+    color: #657d90;
+
+    margin-bottom: 20px;
+}
+
+
+/* =====================================================
+   ÁREA DA SEQUÊNCIA
+===================================================== */
+
+.area-desafio {
+
+    margin-bottom: 48px;
+}
+
+
+.slots {
+
+    min-height: 100px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 10px;
+}
+
+
+/* =====================================================
+   ESPAÇOS DA SEQUÊNCIA
+===================================================== */
+
+.slot {
+
+    width: 82px;
+
+    height: 82px;
+
+    background: #071019;
+
+    border: 2px solid #2c4a61;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    transition:
+        0.2s;
+
+}
+
+
+/* Indicador de espaço vazio */
+
+.slot:not(.preenchido)::after {
+
+    content: "";
+
+    width: 25px;
+
+    height: 2px;
+
+    background: #315068;
+}
+
+
+/* Quando o mouse está sobre o espaço */
+
+.slot.drag-over {
+
+    border-color: #2386c8;
+
+    background: #0b1d2c;
+
+    box-shadow:
+        0 0 16px rgba(35, 134, 200, 0.18);
+}
+
+
+/* Espaço preenchido */
+
+.slot.preenchido {
+
+    border-color: #41657e;
+
+}
+
+
+/* =====================================================
+   ÁREA DAS LETRAS
+===================================================== */
+
+.area-letras {
+
+    margin-bottom: 38px;
+}
+
+
+/* =====================================================
+   CAIXA DAS LETRAS
+===================================================== */
+
+.letras {
+
+    min-height: 190px;
+
+    padding: 22px 18px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 13px;
+
+    border-top: 1px solid #1b3448;
+
+    border-bottom: 1px solid #1b3448;
+
+}
+
+
+/* =====================================================
+   LETRAS
+===================================================== */
+
+.letra {
+
+    width: 68px;
+
+    height: 68px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: #102638;
+
+    border: 2px solid #35566f;
+
+    color: #e9f0f5;
+
+    font-size: 27px;
+
+    font-weight: bold;
+
+    cursor: grab;
+
+    transition:
+        transform 0.15s,
+        background 0.15s,
+        border 0.15s,
+        box-shadow 0.15s;
+}
+
+
+/* Mouse sobre a letra */
+
+.letra:hover {
+
+    background: #173650;
+
+    border-color: #5b7f99;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 7px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Enquanto arrasta */
+
+.letra:active {
+
+    cursor: grabbing;
+
+    transform: scale(0.95);
+}
+
+
+/* =====================================================
+   LETRA DENTRO DO SLOT
+===================================================== */
+
+.slot .letra {
+
+    width: 100%;
+
+    height: 100%;
+
+    background: #102b40;
+
+    border: none;
+
+    font-size: 31px;
+
+}
+
+
+.slot .letra:hover {
+
+    transform: none;
+
+    box-shadow: none;
+
+}
+
+
+/* =====================================================
+   CONTROLES
+===================================================== */
+
+.area-controle {
+
+    border-top: 1px solid #1c3446;
+
+    padding-top: 28px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+/* =====================================================
+   TENTATIVAS
+===================================================== */
+
+.tentativas {
+
+    font-size: 16px;
+
+    letter-spacing: 3px;
+
+    color: #7590a4;
+
+}
+
+
+.tentativas span {
+
+    display: inline-block;
+
+    min-width: 30px;
+
+    margin-left: 8px;
+
+    color: #e4ebf0;
+
+    font-size: 20px;
+
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   BOTÃO VERIFICAR
+===================================================== */
+
+#verificar {
+
+    min-width: 170px;
+
+    padding: 17px 32px;
+
+    border: 1px solid #4f7fa3;
+
+    background: #1769aa;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 2.5px;
+
+    cursor: pointer;
+
+    transition:
+        0.2s;
+}
+
+
+#verificar:hover {
+
+    background: #1d78bf;
+
+    border-color: #78a5c4;
+
+    box-shadow:
+        0 6px 20px rgba(23, 105, 170, 0.3);
+}
+
+
+#verificar:active {
+
+    transform: translateY(1px);
+}
+
+
+#verificar:disabled {
+
+    opacity: 0.5;
+
+    cursor: default;
+}
+
+
+/* =====================================================
+   STATUS
+===================================================== */
+
+.status {
+
+    margin-top: 25px;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    color: #4c6579;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+.status-ponto {
+
+    width: 6px;
+
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #2d8ac7;
+
+}
+
+
+/* =====================================================
+   MENSAGEM DE ERRO
+===================================================== */
+
+.mensagem-erro {
+
+    position: fixed;
+
+    top: 38px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%)
+        translateY(-15px);
+
+    padding: 17px 28px;
+
+    background: #0d1720;
+
+    border: 1px solid #4b6274;
+
+    color: #dce5eb;
+
+    font-size: 14px;
+
+    letter-spacing: 2px;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition:
+        opacity 0.2s,
+        transform 0.2s;
+
+    z-index: 10;
+}
+
+
+.mensagem-erro span {
+
+    margin-right: 10px;
+
+    font-size: 19px;
+
+    color: #a9bac6;
+}
+
+
+.mensagem-erro.mostrar {
+
+    opacity: 1;
+
+    transform:
+        translateX(-50%)
+        translateY(0);
+}
+
+
+/* =====================================================
+   TELA DE SUCESSO
+===================================================== */
+
+.overlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+        rgba(2, 12, 7, 0.975);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition: opacity 0.5s;
+
+    z-index: 20;
+}
+
+
+.overlay.mostrar {
+
+    opacity: 1;
+
+    visibility: visible;
+
+}
+/* =====================================================
+   MENSAGEM DE SUCESSO
+===================================================== */
+
+.mensagem-sucesso {
+
+    text-align: center;
+
+    transform:
+        translateY(20px);
+
+    transition:
+        transform 0.6s;
+}
+
+
+.overlay.mostrar .mensagem-sucesso {
+
+    transform:
+        translateY(0);
+}
+
+
+/* =====================================================
+   ÍCONE DE SUCESSO
+===================================================== */
+
+.icone-sucesso {
+
+    width: 86px;
+
+    height: 86px;
+
+    margin: 0 auto 28px;
+
+    border: 2px solid #35b86b;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 45px;
+
+    color: #55d987;
+
+    background: rgba(30, 120, 70, 0.08);
+
+    box-shadow:
+        0 0 25px rgba(53, 184, 107, 0.25);
+
+    animation:
+        aparecer 0.5s ease;
+}
+
+
+.codigo-validado {
+
+    font-size: 12px;
+
+    letter-spacing: 5px;
+
+    color: #5683a2;
+
+    margin-bottom: 20px;
+}
+
+
+.mensagem-sucesso h2 {
+
+    font-size: 29px;
+
+    font-weight: 400;
+
+    letter-spacing: 5px;
+
+    color: #e8eef3;
+}
+
+
+.palavra-final {
+
+    margin-top: 28px;
+
+    font-size: 52px;
+
+    letter-spacing: 11px;
+
+    font-weight: bold;
+
+    color: #ffffff;
+
+    text-shadow:
+        0 0 18px rgba(57, 200, 115, 0.35),
+        0 0 35px rgba(57, 200, 115, 0.12);
+}
+
+
+.mensagem-sucesso p {
+
+    margin-top: 20px;
+
+    font-size: 16px;
+
+    color: #7ea58c;
+}
+
+
+.proxima-etapa {
+
+    margin-top: 35px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #28543a;
+
+    font-size: 12px;
+
+    letter-spacing: 4px;
+
+    color: #55d987;
+}
+
+
+/* =====================================================
+   ANIMAÇÕES
+===================================================== */
+
+@keyframes aparecer {
+
+    from {
+
+        opacity: 0;
+
+        transform: scale(0.7);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: scale(1);
+
+    }
+
+}
+
+
+.erro-slots {
+
+    animation:
+        erro 0.35s;
+}
+
+
+@keyframes erro {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    20% {
+        transform: translateX(-9px);
+    }
+
+    40% {
+        transform: translateX(9px);
+    }
+
+    60% {
+        transform: translateX(-7px);
+    }
+
+    80% {
+        transform: translateX(5px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+
+}
+
+
+/* =====================================================
+   TELAS MENORES
+===================================================== */
+
+@media (max-width: 850px) {
+
+    .container {
+
+        padding: 35px 25px 25px;
+
+    }
+
+
+    .slots {
+
+        gap: 6px;
+
+    }
+
+
+    .slot {
+
+        width: 55px;
+
+        height: 65px;
+
+    }
+
+
+    .letra {
+
+        width: 55px;
+
+        height: 55px;
+
+        font-size: 22px;
+
+    }
+
+
+    .slot .letra {
+
+        font-size: 25px;
+
+    }
+
+
+    .cabecalho h1 {
+
+        font-size: 28px;
+
+    }
+
+}
+/* =====================================================
+   AJUSTE VISUAL — INTERFACE MAIS CLARA
+   Mantém o azul como identidade principal
+===================================================== */
+
+body {
+    background:
+        radial-gradient(circle at 50% 0%, #eaf5fc 0%, #d9edf8 42%, #c8e3f1 100%);
+    color: #183246;
+}
+
+body::before {
+    background: linear-gradient(rgba(23,105,170,0.035) 1px, transparent 1px);
+    opacity: 0.45;
+}
+
+.container {
+    background: rgba(255,255,255,0.98);
+    border-color: #b7d2e3;
+    box-shadow: 0 20px 55px rgba(35,86,120,0.18), 0 0 35px rgba(23,105,170,0.08);
+}
+
+.container::before { background: #1769aa; }
+.identificacao { color: #54758d; }
+.marcador { background: #1769aa; box-shadow: 0 0 9px rgba(23,105,170,0.45); }
+.cabecalho h1 { color: #17364d; }
+.cabecalho p { color: #5f788a; }
+.titulo-secao { color: #356984; }
+.instrucao { color: #607b8d; }
+
+.slot {
+    background: #f7fbfd;
+    border-color: #a9c7d9;
+}
+
+.slot:not(.preenchido)::after { background: #8eafc3; }
+
+.slot.drag-over {
+    border-color: #1769aa;
+    background: #e7f3fa;
+    box-shadow: 0 0 16px rgba(23,105,170,0.18);
+}
+
+.slot.preenchido { border-color: #5d94b4; }
+
+.letras {
+    border-top-color: #c7dce8;
+    border-bottom-color: #c7dce8;
+}
+
+.letra {
+    background: #eaf4fa;
+    border-color: #91b7ce;
+    color: #173b53;
+    box-shadow: 0 3px 8px rgba(35,86,120,0.08);
+}
+
+.letra:hover {
+    background: #d9edf8;
+    border-color: #1769aa;
+    box-shadow: 0 7px 15px rgba(35,86,120,0.14);
+}
+
+.slot .letra {
+    background: #dceef8;
+    color: #123b56;
+}
+
+.area-controle { border-top-color: #c7dce8; }
+
+/* =====================================================
+   POPUP DE SUCESSO — VERDE CLARO
+===================================================== */
+
+.overlay {
+    background: rgba(221,246,231,0.78);
+    backdrop-filter: blur(5px);
+}
+
+.mensagem-sucesso {
+    min-width: 520px;
+    max-width: 90vw;
+    padding: 48px 60px;
+    background: #f2fff7;
+    border: 2px solid #73d49a;
+    border-radius: 14px;
+    box-shadow: 0 20px 60px rgba(39,125,75,0.22), 0 0 35px rgba(70,190,112,0.16);
+}
+
+.icone-sucesso {
+    width: 86px;
+    height: 86px;
+    border: 3px solid #31ad62;
+    color: #22984f;
+    background: #dff8e9;
+    box-shadow: 0 0 0 7px rgba(49,173,98,0.08), 0 0 28px rgba(49,173,98,0.22);
+}
+
+.codigo-validado { color: #278e50; }
+.mensagem-sucesso h2 { color: #1f5133; }
+.palavra-final { color: #176f3b; text-shadow: 0 0 18px rgba(49,173,98,0.20); }
+.mensagem-sucesso p { color: #4f7760; }
+.proxima-etapa { border-top-color: #b8e6c8; color: #278e50; }
+
+
+/* =====================================================
+   VERSÃO CLARA — CONTRASTE ALTO
+   Azul UFERSA + fundo claro
+===================================================== */
+
+html, body {
+    background: #eef7fc !important;
+    color: #18384d !important;
+}
+
+body {
+    background:
+        radial-gradient(circle at 50% 0%, #ffffff 0%, #eef7fc 55%, #dceef8 100%) !important;
+}
+
+body::before {
+    background:
+        linear-gradient(rgba(23,105,170,0.035) 1px, transparent 1px) !important;
+    opacity: 0.5 !important;
+}
+
+.container {
+    background: #ffffff !important;
+    border: 1px solid #b9d5e5 !important;
+    box-shadow:
+        0 14px 40px rgba(33, 83, 116, 0.14),
+        0 2px 8px rgba(33, 83, 116, 0.08) !important;
+}
+
+.container::before {
+    background: #1769aa !important;
+}
+
+.identificacao {
+    color: #4f7187 !important;
+}
+
+.cabecalho h1 {
+    color: #123d5a !important;
+}
+
+.cabecalho p {
+    color: #5d7789 !important;
+}
+
+.titulo-secao {
+    color: #1769aa !important;
+}
+
+.instrucao {
+    color: #587387 !important;
+}
+
+.slot {
+    background: #f8fcff !important;
+    border: 2px solid #9fc1d5 !important;
+}
+
+.slot:not(.preenchido)::after {
+    background: #79a5bd !important;
+}
+
+.slot.drag-over {
+    background: #e7f4fb !important;
+    border-color: #1769aa !important;
+    box-shadow: 0 0 16px rgba(23,105,170,0.20) !important;
+}
+
+.slot.preenchido {
+    background: #f0f8fc !important;
+    border-color: #5f98b8 !important;
+}
+
+.letras {
+    border-top: 1px solid #c5dce9 !important;
+    border-bottom: 1px solid #c5dce9 !important;
+}
+
+.letra {
+    background: #e8f4fa !important;
+    border: 2px solid #8fb8ce !important;
+    color: #123e59 !important;
+    box-shadow: 0 3px 8px rgba(23,69,98,0.10) !important;
+}
+
+.letra:hover {
+    background: #d7ecf7 !important;
+    border-color: #1769aa !important;
+    box-shadow: 0 7px 16px rgba(23,105,170,0.18) !important;
+}
+
+.slot .letra {
+    background: #dceef8 !important;
+    color: #0f3b57 !important;
+}
+
+.area-controle {
+    border-top: 1px solid #c5dce9 !important;
+}
+
+.erro {
+    background: #fff5f5 !important;
+    border-color: #e1aaaa !important;
+    color: #a13d3d !important;
+}
+
+
+/* =====================================================
+   SUCESSO — POPUP VERDE BEM CLARO
+===================================================== */
+
+.overlay {
+    background: rgba(220, 242, 228, 0.88) !important;
+    backdrop-filter: blur(6px);
+}
+
+.mensagem-sucesso {
+    background: #f4fff7 !important;
+    border: 2px solid #67c98b !important;
+    border-radius: 16px !important;
+    box-shadow:
+        0 18px 55px rgba(44, 126, 75, 0.20),
+        0 0 0 1px rgba(103,201,139,0.12) !important;
+}
+
+.icone-sucesso {
+    background: #dff8e8 !important;
+    border-color: #36b66a !important;
+    color: #238c4e !important;
+}
+
+.codigo-validado {
+    color: #299354 !important;
+}
+
+.mensagem-sucesso h2 {
+    color: #1d5533 !important;
+}
+
+.palavra-final {
+    color: #18753d !important;
+    text-shadow: 0 2px 12px rgba(36,150,78,0.15) !important;
+}
+
+.mensagem-sucesso p {
+    color: #50765e !important;
+}
+
+.proxima-etapa {
+    border-top-color: #b8e5c8 !important;
+    color: #299354 !important;
+}
