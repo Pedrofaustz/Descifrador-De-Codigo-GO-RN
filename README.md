@@ -1,99 +1,61 @@
 # 🔐 Decifrador — Escape Room UFERSA
 
-<<<<<<< HEAD
-Sistema web desenvolvido para ser utilizado durante o **GO!RN**, no **Escape Room da UFERSA**.
+Sistema web desenvolvido para o **Escape Room da UFERSA**, durante o **GO!RN**.
 
-O projeto consiste em um desafio de decifração no qual os participantes devem identificar letras a partir de códigos espalhados pelo ambiente e, posteriormente, organizá-las no sistema para formar diferentes palavras, de acordo com o nível de dificuldade.
-=======
-Sistema web desenvolvido para ser utilizado durante o **GO!RN**, no
-**Escape Room da UFERSA**.
-
-O projeto consiste em um desafio de decifração no qual os participantes
-devem identificar letras a partir de códigos espalhados pelo ambiente e,
-posteriormente, organizá-las no sistema para formar a sequência correta:
-
-**INOVAÇÃO**
->>>>>>> 99acb4be4c414d231c8b073dbba448a74736dfc5
-
----
-
-## 🎯 Objetivo
-
-<<<<<<< HEAD
-O sistema tem como objetivo complementar a experiência presencial do **Escape Room da UFERSA**, funcionando como uma das etapas do desafio.
-
-Os participantes encontram códigos espalhados pela sala e utilizam uma **tabela física** para identificar quais letras cada símbolo representa.
-
-Depois de descobrir as letras, elas devem ser organizadas no computador na ordem correta para formar uma das palavras-chave do desafio.
-
----
+O desafio combina códigos físicos e interação digital. Os participantes encontram códigos pela sala, utilizam uma tabela para descobrir as letras e devem organizá-las no computador na sequência correta.
 
 ## 🔑 Palavras-chave
 
-O desafio possui **três níveis de dificuldade**, definidos de acordo com o tamanho das palavras.
-
 ### 🟢 Fácil
+1. **CIÊNCIA** — C-I-Ê-N-C-I-A — 7 letras
+2. **UFERSA** — U-F-E-R-S-A — 6 letras
 
-**1. CIÊNCIA**
+### 🟡 Médio
+3. **INOVAÇÃO** — I-N-O-V-A-Ç-Ã-O — 8 letras
+4. **TECNOLOGIA** — T-E-C-N-O-L-O-G-I-A — 10 letras
 
-```text
-C - I - Ê - N - C - I - A
-=======
-O sistema tem como objetivo complementar a experiência presencial do
-Escape Room, funcionando como uma das etapas do desafio.
+### 🔴 Difícil
+5. **UNIVERSIDADE** — U-N-I-V-E-R-S-I-D-A-D-E — 12 letras
 
-Os participantes encontram códigos espalhados pela sala e utilizam uma
-tabela física para identificar quais letras cada símbolo representa.
+## 🏆 Funcionamento
 
-Depois de descobrir as letras, elas devem ser organizadas no computador
-na ordem correta.
+- Códigos são encontrados na sala;
+- A tabela física é utilizada para descobrir as letras;
+- As letras são arrastadas para os espaços corretos;
+- As letras ficam embaralhadas para aumentar a dificuldade;
+- O sistema conta as tentativas;
+- Em caso de erro, as letras retornam para a seleção;
+- Em caso de acerto, é exibida uma animação e um efeito sonoro;
+- Após o acerto, o participante pode avançar para a próxima etapa.
 
-A sequência correta é:
+## 💻 Tecnologias
 
-> **I N O V A Ç Ã O**
+- HTML5
+- CSS3
+- JavaScript
 
-O sistema verifica a sequência informada pelo participante e indica se
-o desafio foi concluído.
+## 📁 Organização
 
----
+Cada desafio possui sua própria pasta, contendo:
 
-## 🏆 Competição
+- `index.html`
+- `style.css`
+- `script.js`
 
-A proposta do desafio possui um caráter competitivo.
+As pastas são divididas por dificuldade:
 
-O sistema conta o número de tentativas realizadas por cada participante
-ou equipe.
+**Fácil:** CIÊNCIA e UFERSA  
+**Médio:** INOVAÇÃO e TECNOLOGIA  
+**Difícil:** UNIVERSIDADE
 
-Sempre que uma sequência incorreta é enviada:
+## 🌐 Execução
 
-- a tentativa é contabilizada;
-- uma mensagem de erro é apresentada;
-- as letras retornam para a área de seleção;
-- o participante pode tentar novamente.
+O sistema funciona **offline** e não necessita de servidor, banco de dados ou instalação de dependências.
 
-Ao acertar a sequência, o sistema apresenta uma animação de conclusão e
-libera a próxima etapa do Escape Room.
+Para executar, basta abrir o `index.html` do desafio desejado em um navegador.
 
-O número de tentativas pode ser utilizado posteriormente como um dos
-critérios de comparação entre as equipes.
+## 🤖 Apoio de Inteligência Artificial
 
----
+O projeto foi desenvolvido com **apoio de Inteligência Artificial**, utilizada como ferramenta auxiliar na criação, lógica, interface, organização do código e documentação.
 
-## 💻 Funcionamento
-
-O sistema foi desenvolvido para funcionar **offline**, permitindo que
-seja executado diretamente em um computador durante o evento.
-
-Não é necessário:
-
-- conexão com a internet;
-- servidor;
-- banco de dados;
-- instalação de dependências;
-- hospedagem.
-
-Basta abrir o arquivo:
-
-```text
-index.html
->>>>>>> 99acb4be4c414d231c8b073dbba448a74736dfc5
+O desenvolvimento contou com **participação e direcionamento humano**, e o uso de IA é explicitamente reconhecido neste projeto.
